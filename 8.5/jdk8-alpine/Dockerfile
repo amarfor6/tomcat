@@ -130,6 +130,9 @@ RUN set -e \
 		echo >&2 "$nativeLines"; \
 		exit 1; \
 	fi
+	
+RUN wget -O /usr//bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64
+RUN chmod +x /usr//bin/dumb-init
 
 EXPOSE 8080
 
